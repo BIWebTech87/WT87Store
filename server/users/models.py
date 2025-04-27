@@ -26,3 +26,6 @@ class User(AbstractUser):
         related_name='custom_user_set',
         related_query_name='custom_user'
     )
+
+    def __str__(self):
+        return f"{self.username} {self.email}"
